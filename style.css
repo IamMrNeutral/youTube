@@ -1,0 +1,375 @@
+.sideNav{
+    height: 100%;
+    width: 74px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.mainNav{
+    height: 56px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0px;
+    font: 10px Roboto ,Arial, Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.trigram button{
+    outline: none;
+    font-size: 24px;
+    border: none;
+    background: transparent;
+    margin: 0px 16px 0px 0px;
+    padding: 8px solid;
+}
+.logo img{
+    height: 36px;
+    width: 80px;
+    
+}
+.youtube{
+   padding-right: 29px;
+    display: flex;
+    font: 10px Roboto ,Arial, Sans-serif;
+   
+}
+
+.searchbar{
+    width: 728px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.search{
+    margin: 0px 0px 0px 40px;
+    padding: 0px 4px;
+    height: 32px;
+    width: 78.98%;
+    color: #606060;
+    font-size: 20px;
+    outline: lightgray;
+    border: 1px solid rgb(185, 184, 184);
+}
+.bar{
+    height: 32px;
+    width: 58.24;
+}
+.icons{
+    width: 204px;
+    height: 40px;
+    display: flex;
+    float: right;
+}
+.baricon{
+    border: 1px solid rgb(185, 184, 184);
+    border-left: none;
+    width: 65px;
+    height : 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.baricon:hover{
+    background-color: rgb(248, 247, 247);
+}
+.searchbar img{
+    height: 24px;
+    width: 24px;
+}
+.mic{
+padding: 8px;
+}
+.suggestions{
+    height : 56px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid rgb(221, 221, 221);
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+    display: grid;
+}
+.sug button{
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 40px;
+    margin-left: 10px;
+    height: 29px;
+    align-items: center;   
+    color: #606060; 
+    position: static;
+}
+.whole{
+    display: flex;
+}
+.sidenavMod{
+ width: 240px;
+}
+.video{
+    height: 100%;
+    width: 96%;
+    display: grid;
+}
+.alternate{
+    display: none;
+}
+.alternate .baricon{
+    border: 1px solid rgb(185, 184, 184);
+    width: 65px;
+    height : 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content
+{
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 24px 0px 0px;
+    justify-content: space-evenly;  
+      background-color: rgb(248, 248, 248)
+}
+.homeContent{
+    height: 100%;
+    position: absolute;
+}
+.mainContent{
+    display: none;
+    height: 100%;
+    margin-top: 16px;
+    scroll-behavior:auto;
+    scrollbar-width: 10px;
+}
+.mainContent hr{
+    margin-left: 0%;
+    width: 230px;
+}
+.dgrid{
+display: grid;
+}
+.dnone{
+display: none;
+}
+.home{
+    height: 72px;
+    width: 74px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px 14px;
+    
+}
+.home img{
+    left:0%;
+    height: 24px;
+    width: 24px;
+    margin: 0px 0px 6px;
+    align-items: center;
+    fill: brown;
+}
+.home span{
+    position: relative;
+    font: 10px Robato,Arial,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconsvg
+{
+    
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    margin-right: 5px;
+
+}
+.mainOuter{
+    width: 230px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 0%;
+    padding: 0px 24px;
+}
+.mainOuter img{
+    height: 24px;
+    width: 24px;
+    margin:0px 24px 0px 0px ;
+}
+.active{
+background-color: rgb(224, 224, 224);
+}
+.mainOuter:hover{
+    background-color: rgb(233, 233, 233);
+}
+.signin{
+    width: 240px;
+    height: 121px;
+    background-color: aquamarine;
+    padding: 16px 28px;
+}
+pre{
+    font:12px Roboto,Arial ,sans-serif;
+}
+.best{
+    color : #606060;
+    padding: 8px 16px;
+    width: 240px;
+    height: 32px;
+}
+.home:hover{
+    background-color: #eeeeee;
+}
+.drop{
+    height:100%;
+    width : 260px;
+    position: absolute;
+    right: 8%;
+    border: 1px solid;
+    background-color: #eeeeee;
+    display: none;
+ 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: none; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(184, 184, 184); 
+    border-radius: 10px;
+  }
+  .videoContent{
+      height:300px;
+      width: 280px;
+      margin: 10px;
+      
+  }
+  .videoContent :hover{
+    cursor: pointer;
+  }
+  .videoContent img{
+      width: 100%;
+      height: 60%;
+  }
+  .a{
+      height: 120px;
+      display: flex;
+  }
+  .b{
+      width: 15%;
+  }
+.c{
+    width: 85%;
+    padding: 20px 0px 0px 5px;
+}
+.c h6{
+    font-size: auto;
+    height: 40px;
+    margin-bottom: 0%;
+    overflow: hidden;
+}
+.c p {
+    margin-bottom: 0%;
+   font-weight:70px ;
+   color: #606060;
+}
+.OnsearchContent{
+    height: 202px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+}
+.OnsearchContent img{
+    height: 100%;
+    width: 33%;
+    
+}
+.OnsearchContentWhole{
+    width: 77%;
+    height: 202px;
+    padding: 10px;
+    align-items: center;
+    display: grid;
+
+}
+.OnsearchContentWhole h5{
+    font-weight:normal ;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.OnsearchContentWhole :nth-child(2){
+color: #606060;
+font-size: 12px;
+margin-bottom: 5px;
+}
+.OnsearchContentWhole p img{
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+}
+.OnsearchContentWhole :nth-child(4){
+font-size: 12px;
+color: #606060;
+}
+.content iframe{
+    width:66%;
+     height:480px ;
+     margin-bottom: 50px;
+}
+
+@media only screen and (max-width : 1310px){
+    .youtube{
+        padding: 0px 0px 0px 0px;
+    }
+    .search{
+        margin: 0px 0px 0px 10px;
+    }
+    .suggestions{
+        display: none;
+    }
+   
+.searchbar{
+    width: 350px;
+} 
+.mainNav{
+    border-bottom: 1px solid rgb(221, 221, 221);
+} 
+}
+@media only screen and (max-width : 675px){
+    .alternate{
+        display: flex;
+    }
+    .searchbar{
+        display: none;
+    }
+    .homeContent{
+        display: none;
+    }
+    .content iframe{
+        width: 80%;
+        margin-left: 0%;
+    }
+    .sideNav{
+        width: 10px;
+    }
+
+    .video{
+        width: 100%;
+    }
+}
