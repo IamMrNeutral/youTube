@@ -1,29 +1,28 @@
 $(document).ready(function(){
 
      var onSearchdata = false;
-     var home = document.getElementById("home")
-     var trigram = document.getElementById('trigram')
-     var sideNav = document.querySelector('.sideNav')
-     var content = document.querySelector('.whole')
-     var mainCont = document.querySelector('.mainContent')
-     var homeCont = document.querySelector('.homeContent')
-     var drop = document.querySelector('.drop')
-     var content = document.querySelector(".content")
-     var search = document.querySelector(".baricon")
+     const home = document.getElementById("home")
+     const trigram = document.getElementById('trigram')
+     const sideNav = document.querySelector('.sideNav')
+     const mainCont = document.querySelector('.mainContent')
+     const homeCont = document.querySelector('.homeContent')
+     const drop = document.querySelector('.drop')
+     const content = document.querySelector(".content")
+     const search = document.querySelector(".baricon")
      trigram.addEventListener('click',function(){
           sideNav.classList.toggle("sidenavMod");
           homeCont.classList.toggle("dnone");
           mainCont.classList.toggle("dgrid");
      })
-     var Query = document.getElementById("search")
+     const Query = document.getElementById("search")
 document.querySelector('#drop').addEventListener('click',function(){
      drop.classList.toggle("dgrid");
 })
      const KEY = "AIzaSyAEwKgnL3EOj_T_Ee80T-Adm828tq3H2XA";
-     var query = "Random";
-     var URL = 'https://www.googleapis.com/youtube/v3/search'
+     const query = "Random";
+     const URL = 'https://www.googleapis.com/youtube/v3/search'
      
-     var options = 
+     const options = 
          {
                  part : "snippet",
                  q : query,
@@ -31,7 +30,7 @@ document.querySelector('#drop').addEventListener('click',function(){
                  key : KEY
          }
          search.addEventListener('click',()=>{
-          content.innerHTML=" ";
+          content.innerHTML="";
           options.q = Query.value;
           Query.value = ""
           onSearchdata = true
@@ -39,7 +38,7 @@ document.querySelector('#drop').addEventListener('click',function(){
          })
          Query.addEventListener("keyup",(e)=>{
           if(e.keyCode===13){
-               content.innerHTML=" ";
+               content.innerHTML="";
               options.q = Query.value;
               Query.value = ""
               onSearchdata = true
@@ -50,30 +49,30 @@ document.querySelector('#drop').addEventListener('click',function(){
      function call(){
          $.get(URL,options,function(data){
          for (d of data.items){
-          var div = document.createElement("div")
+          const div = document.createElement("div")
           div.id=d.id.videoId;
-          var div1 = document.createElement("div");
-          var div2 = document.createElement("div");
-          var img2 = document.createElement("img");
-          var p = document.createElement("p")
-          var p1 = document.createElement("p")
+          const div1 = document.createElement("div");
+          const div2 = document.createElement("div");
+          const img2 = document.createElement("img");
+          const p = document.createElement("p")
+          const p1 = document.createElement("p")
           img2.src = "images/account_circle_black_24dp.svg"
           div2.appendChild(img2)
           div2.classList.add("b")
-          var div3 = document.createElement("div");
+          const div3 = document.createElement("div");
           div1.appendChild(div2)
           div1.classList.add("a")
           div3.classList.add("c")
           div1.appendChild(div3)
           div.classList.add("videoContent")
-          var image = document.createElement("img");
+          const image = document.createElement("img");
           image.id = "imageElement"
           image.alt = ":) its an image"
           image.src = d.snippet.thumbnails.high.url;
           div.appendChild(image)
           div.appendChild(div1)
           content.appendChild(div)
-          var h5 = document.createElement("h6")
+          const h5 = document.createElement("h6")
           h5.innerText = d.snippet.title; 
           div3.appendChild(h5)
           p.innerHTML = d.snippet.channelTitle;
@@ -82,7 +81,7 @@ document.querySelector('#drop').addEventListener('click',function(){
           div3.appendChild(p1)
           
          }
-         var imm = document.querySelectorAll("#imageElement")
+         const imm = document.querySelectorAll("#imageElement")
          for(i of imm){
           i.addEventListener('click',(e)=>{
                     content.innerHTML = "";
@@ -93,7 +92,7 @@ document.querySelector('#drop').addEventListener('click',function(){
          
          })
          function playVideo(id){
-               var iframe = document.createElement("iframe");
+               const iframe = document.createElement("iframe");
                iframe.src = `https://www.youtube.com/embed/${id}`
                console.log(id);
                content.appendChild(iframe)
@@ -107,17 +106,17 @@ document.querySelector('#drop').addEventListener('click',function(){
                  console.log(data)
          for (d of data.items){
        
-       var div = document.createElement("div")
-       var div1 = document.createElement("div")
+       const div = document.createElement("div")
+       const div1 = document.createElement("div")
        div1.id=d.id.videoId;
-       var image = document.createElement("img");
-       var image2 = document.createElement("img");
-       var span = document.createElement('span')
+       const image = document.createElement("img");
+       const image2 = document.createElement("img");
+       const span = document.createElement('span')
        image2.src = "images/account_circle_black_24dp.svg";
-       var h = document.createElement('h')
-       var p = document.createElement('p')
-       var p1 = document.createElement('p')
-       var p2 = document.createElement('p')
+       const h = document.createElement('h')
+       const p = document.createElement('p')
+       const p1 = document.createElement('p')
+       const p2 = document.createElement('p')
        content.appendChild(div1)
        div1.classList.add("OnsearchContent")
        div.classList.add("OnsearchContentWhole")
@@ -138,7 +137,7 @@ document.querySelector('#drop').addEventListener('click',function(){
        div1.appendChild(div)
        
   }
-  var imm = document.querySelectorAll("#imageElement")
+  const imm = document.querySelectorAll("#imageElement")
          for(i of imm){
           i.addEventListener('click',(e)=>{
                     content.innerHTML = "";
@@ -149,7 +148,7 @@ document.querySelector('#drop').addEventListener('click',function(){
 
 })
 function playVideo(id){
-     var iframe = document.createElement("iframe");
+     const iframe = document.createElement("iframe");
      iframe.src = `https://www.youtube.com/embed/${id}`
      console.log(id);
      content.appendChild(iframe)
@@ -158,7 +157,7 @@ function playVideo(id){
 
   }
   home.addEventListener('click',()=>{
-       content.innerHTML=" ";
+       content.innerHTML="";
      call();
 })
 
@@ -173,10 +172,10 @@ window.addEventListener('scroll',()=>{
       
      }
 })
-var button = document.querySelectorAll("#button")
+const button = document.querySelectorAll(".button")
 for (b of button){
      b.addEventListener('click',(e)=>{
-          content.innerHTML=" ";
+          content.innerHTML="";
           options.q = e.target.innerText
           call();
      })
